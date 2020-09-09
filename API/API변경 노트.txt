@@ -1,0 +1,31 @@
+-API List-
+	*5000 port 
+		>효율 그래프 추출 가능한지 테스트 요함.(probability)
+
+	*5001 port
+		>conversion 결합시에 케이스 나누기
+			1)request로 inverter 받기(boolean)
+			2)받은 값 바로 DB에 업데이트 하기
+				-'update model_set  set isinverter = "{}"'.format(True)
+		>유사rpm 찾아서 model_set의 isRep에 업데이트 하기(모터 정격rpm을 찾아서 유사 rpm 쏘기.)★
+			1)rpm 찾기 함수화 하기
+			2)찾은 값 찾으면 DB에 업데이트 하기(int)
+				-'update model_set set isrep = "{}" where rpm ="{}" '.format(True,similar_rpm)★
+		
+				
+	*5002 port
+		>모터 수식 바꾸기(모터정보 위치 찾기)
+			1)poll, hertz, watt, torque 받아서 모터곡선 확인
+				- full load = poll * hertz
+ 
+		> P,Q,R중 2개의 파라미터 받은 후 X, Y, Val, mp,me,fp,fe 반환
+			1)P,Q,R 연산완료.
+			2)RPM으로 모터의 효율 계산
+			3)Q로 팬의 파워와 효율 계산 
+			4)3에서 계산한 파워에 모터의 효율을 곱해서 모터 파워 계산
+		>단위변환함수 삽입.
+			1)계산된 값에 따른 단위를 쿼리로 찾음
+			2)단위환산 후 json으로 보냄.
+		
+				
+		
