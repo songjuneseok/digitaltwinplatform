@@ -1,0 +1,22 @@
+To-Do
+
+Regression
+	Front simulation
+		X Variable
+			-Line 1 Current RMS
+			-Line 2 Current RMS
+			-Line 3 Current RMS
+			-Line 1 Voltage RMS
+			-Line 2 Voltage RMS
+			-Line 3 Voltage RMS
+			-Line 1 power factor
+			-Line 2 power factor
+			-Line 3 power factor
+			-MotorTemperature
+		Y Variable
+			-TachoSpeed(RPM)
+
+		Regression Model
+			-Linear Regression
+			-MLP Regression
+				
